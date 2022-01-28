@@ -205,10 +205,43 @@ console.log(filteredFood)
 
 //CODE HERE
 
+
+
+/*
+
+
+
 function filterByProperty(property, number, type) {
     let filtered = []
-    
+    foodArr.filter(food => {
+
+        switch (food[property]) {
+            case food.popularity {
+                if (food.popularity)
+            }
+        }
+
+        if (property === food[property])
+
+
+        if (String(food.popularity) >= property || String(food.price) <= property || String(food.rating) >= property) {
+            if (food.category === type) {
+                if (food.rating >= number) {
+                    filtered.push(food)
+                }
+            }
+        }
+
+        return filtered
+    })
 }
+
+
+*/
+
+// not really sure what type is
+// didn't finish this one kinda confused in what it's asking me to do
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -218,3 +251,8 @@ function filterByProperty(property, number, type) {
 */
 
 //CODE HERE
+
+//console.log(filterByProperty("popularity", 3, 4))
+
+
+
