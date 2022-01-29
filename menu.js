@@ -103,36 +103,49 @@ console.log(category)
 
 //CODE HERE
 
-let breadStick = {
-    ...pizza
-}
-breadStick.name = "Garlic Bread Stix"
-breadStick.popularity = 3
-breadStick.category = "Appetizer"
-breadStick.price = 5.99
 
-let peporoni = pizza
-peporoni.name = "Peporoni"
-peporoni.popularity = 1
-peporoni.rating = 5
-peporoni.tags = ["kids"]
+let foodArr = [{
+    name: "Cheese",
+    price: 12.99,
+    category: "entree",
+    popularity: 2,
+    rating: 4.7,
+    tags: ["vegitarian", "kids"]
+},
+{
+    name: "Peperoni",
+    price: 15.99,
+    category: "entree",
+    popularity: 1,
+    rating: 5,
+    tags: ["kids", "best-pizza", "fan-fav"]
+},
+{
+    name: "Garlic Bread Stix",
+    price: 5.99,
+    category: "Appetizer",
+    popularity: 4,
+    rating: 4.2,
+    tags: ["most-toppings", "fan-fav"]
+},
+{
+    name: "Supreme",
+    price: 17.99,
+    category: "entree",
+    popularity: 3,
+    rating: 4.5,
+    tags: ["vegitarian", "kids"]
+},
+{
+    name: "Cinnima Stix",
+    price: 6.99,
+    category: "dessert",
+    popularity: 5,
+    rating: 4.2,
+    tags: ["kids", "dessert", "vegitarian"]
+}]
 
-let supreme = pizza
-supreme.name = "Supreme"
-supreme.popularity = 5
-supreme.rating = 4.1
-supreme.tags = ["most-toppings"]
-supreme.price = 14
 
-let cinniamaStix = pizza
-cinniamaStix.name = "Cinnima Stix"
-cinniamaStix.popularity = 4
-cinniamaStix.price = 6.99
-cinniamaStix.rating = 5
-cinniamaStix.tags = ["kids", "dessert", "vegitarian"]
-
-
-let foodArr = [pizza, breadStick, peporoni, supreme, cinniamaStix]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -148,19 +161,9 @@ let foodArr = [pizza, breadStick, peporoni, supreme, cinniamaStix]
 
 //CODE HERE
 
-function filterTags(tags) {
-    for (food in foodArr) {
-        if (foodArr[food].tags.includes(tags)) {
-            return foodArr[food]
-        }
-    }
-}
+const filteredFood = foodArr.filter(food => food.tags.includes('kids"'))
 
-const filteredFood = foodArr.filter(food => {
-    return filterTags("kids")
-})
-
-console.log(filteredFood)
+//console.log(filteredFood)
 
 
 
@@ -207,40 +210,23 @@ console.log(filteredFood)
 
 
 
-/*
+
 
 
 
 function filterByProperty(property, number, type) {
-    let filtered = []
-    foodArr.filter(food => {
-
-        switch (food[property]) {
-            case food.popularity {
-                if (food.popularity)
-            }
+    let filtered = foodArr.filter(meal => {
+        if (type === 'above') {
+            return meal[property] > number
+        } else if (type === 'below') {
+            return meal[property] < number
         }
-
-        if (property === food[property])
-
-
-        if (String(food.popularity) >= property || String(food.price) <= property || String(food.rating) >= property) {
-            if (food.category === type) {
-                if (food.rating >= number) {
-                    filtered.push(food)
-                }
-            }
-        }
-
-        return filtered
     })
+
+    return filtered
 }
 
 
-*/
-
-// not really sure what type is
-// didn't finish this one kinda confused in what it's asking me to do
 
 
 /*
@@ -252,7 +238,7 @@ function filterByProperty(property, number, type) {
 
 //CODE HERE
 
-//console.log(filterByProperty("popularity", 3, 4))
+console.log(filterByProperty("rating", 4.5, "below"))
 
 
 

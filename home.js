@@ -132,9 +132,9 @@ const deals = [
 
 //CODE HERE
 
-const newDeals = deals[0].title.replace('15', '10')
+deals[0].title = deals[0].title.replace('15', '10')
 //not sure wether or not I was supposed to make a new varible
-console.log(newDeals)
+console.log(deals)
 
 
 
@@ -155,6 +155,6 @@ console.log(newDeals)
 
 
 
-let deas = deals[1].desc.replace('March!', "April!").trim()
+deals[1].desc = deals[1].desc.replace('March!', "April!").trim()
 
-console.log(deas)
+console.log(deals)
